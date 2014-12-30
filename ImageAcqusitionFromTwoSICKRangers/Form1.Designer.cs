@@ -32,6 +32,7 @@
             this.initialize_button = new System.Windows.Forms.Button();
             this.capture_button = new System.Windows.Forms.Button();
             this.disconnect_button = new System.Windows.Forms.Button();
+            this.hWindowControl2 = new HalconDotNet.HWindowControl();
             this.SuspendLayout();
             // 
             // hWindowControl1
@@ -75,11 +76,23 @@
             this.disconnect_button.UseVisualStyleBackColor = true;
             this.disconnect_button.Click += new System.EventHandler(this.disconnect_button_Click);
             // 
+            // hWindowControl2
+            // 
+            this.hWindowControl2.BackColor = System.Drawing.Color.Black;
+            this.hWindowControl2.BorderColor = System.Drawing.Color.Black;
+            this.hWindowControl2.ImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
+            this.hWindowControl2.Location = new System.Drawing.Point(256, 12);
+            this.hWindowControl2.Name = "hWindowControl2";
+            this.hWindowControl2.Size = new System.Drawing.Size(238, 324);
+            this.hWindowControl2.TabIndex = 5;
+            this.hWindowControl2.WindowSize = new System.Drawing.Size(238, 324);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 391);
+            this.Controls.Add(this.hWindowControl2);
             this.Controls.Add(this.disconnect_button);
             this.Controls.Add(this.capture_button);
             this.Controls.Add(this.initialize_button);
@@ -96,6 +109,7 @@
         private System.Windows.Forms.Button initialize_button;
         private System.Windows.Forms.Button capture_button;
         private System.Windows.Forms.Button disconnect_button;
+        private HalconDotNet.HWindowControl hWindowControl2;
     }
 }
 
