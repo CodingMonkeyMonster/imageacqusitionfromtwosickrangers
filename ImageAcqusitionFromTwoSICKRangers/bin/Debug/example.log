@@ -1,0 +1,17 @@
+
+Error log started on Tue Dec 30 15:12:36 2014
+
+15:12:54 <MyCamera1> Error: 100010 : Failed to open file: C:\402-13\Shared\prm files\Parameter File Side Inspection (three fast multiscan 3D inspection) v13.prm
+15:12:54 <MyCamera1> Error: 100000 : Failed to set camera parameters
+15:13:13 <MyCamera1 grabber> Message: Connected: Queue size: 47 @ 512x10752 bytes. Driver mode: Fast
+
+Error log started on Tue Dec 30 15:24:45 2014
+
+15:25:16 <MyCamera1 grabber> Message: Connected: Queue size: 5 @ 3350x13848 bytes. Driver mode: Fast
+
+Error log started on Tue Dec 30 15:32:14 2014
+
+15:32:35 <MyCamera1 grabber> Message: Connected: Queue size: 5 @ 3350x13824 bytes. Driver mode: Fast
+
+Error log closed on Tue Dec 30 15:33:01 2014
+

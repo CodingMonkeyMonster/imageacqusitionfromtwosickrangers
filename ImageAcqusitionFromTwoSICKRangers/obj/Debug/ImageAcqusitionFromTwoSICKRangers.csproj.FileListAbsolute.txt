@@ -1,0 +1,15 @@
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\ImageAcqusitionFromTwoSICKRangers.exe.config
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\ImageAcqusitionFromTwoSICKRangers.exe
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\ImageAcqusitionFromTwoSICKRangers.pdb
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\halcondotnet.dll
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\hdevenginedotnet.dll
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\Sick.Icon.Interfaces.dll
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\Sick.Icon.x64.dll
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\halcondotnet.xml
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\bin\Debug\hdevenginedotnet.xml
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\obj\Debug\ImageAcqusitionFromTwoSICKRangers.Form1.resources
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\obj\Debug\ImageAcqusitionFromTwoSICKRangers.Properties.Resources.resources
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\obj\Debug\ImageAcqusitionFromTwoSICKRangers.csproj.GenerateResource.Cache
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\obj\Debug\ImageAcqusitionFromTwoSICKRangers.exe
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\obj\Debug\ImageAcqusitionFromTwoSICKRangers.pdb
+C:\Users\Omicron\Documents\Visual Studio 2013\Projects\ImageAcqusitionFromTwoSICKRangers\ImageAcqusitionFromTwoSICKRangers\obj\Debug\ImageAcqusitionFromTwoSICKRangers.csprojResolveAssemblyReference.cache
