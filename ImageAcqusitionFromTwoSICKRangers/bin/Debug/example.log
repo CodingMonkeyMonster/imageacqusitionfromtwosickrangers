@@ -32,3 +32,30 @@ Error log started on Tue Dec 30 15:58:24 2014
 Error log started on Tue Dec 30 15:58:30 2014
 
 15:58:57 <MyCamera1 grabber> Message: Connected: Queue size: 5 @ 3350x13824 bytes. Driver mode: Fast
+
+Error log started on Wed Dec 31 19:30:55 2014
+
+19:31:13 <MyCamera1> Error: 100010 : Failed to open file: ../../../../Parameter File Side Inspection (three fast multiscan 3D inspection) v15.prm
+19:31:13 <MyCamera1> Error: 100000 : Failed to set camera parameters
+
+Error log started on Wed Dec 31 19:31:57 2014
+
+19:32:06 <MyCamera1> Error: 100010 : Failed to open file: ../../../../Parameter File Side Inspection (three fast multiscan 3D inspection) v15.prm
+19:32:06 <MyCamera1> Error: 100000 : Failed to set camera parameters
+
+Error log started on Wed Dec 31 19:32:42 2014
+
+19:32:59 <MyCamera1 grabber> Message: Connected: Queue size: 5 @ 3350x13824 bytes. Driver mode: Fast
+
+Error log started on Wed Dec 31 19:33:03 2014
+
+19:33:13 <MyCamera1 grabber> Message: Connected: Queue size: 5 @ 3350x13824 bytes. Driver mode: Fast
+19:33:17 <MyCamera1 grabber_connection> Error: 11002 : Block 15413: 13400 packet(s) could not be recovered.
+19:33:20 <MyCamera1 grabber_connection> Error: 11002 : Block 15414: 13400 packet(s) could not be recovered.
+19:33:24 <MyCamera1 grabber_connection> Error: 11002 : Block 15415: 13400 packet(s) could not be recovered.
+19:33:27 <MyCamera1 grabber_connection> Error: 11002 : Block 15416: 13400 packet(s) could not be recovered.
+19:33:30 <MyCamera1 grabber_connection> Error: 11002 : Block 15417: 13400 packet(s) could not be recovered.
+19:33:53 <MyCamera1 grabber_connection> Error: 11002 : Block 15418: 13400 packet(s) could not be recovered.
+
+Error log closed on Wed Dec 31 19:34:00 2014
+

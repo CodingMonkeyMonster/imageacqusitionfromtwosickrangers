@@ -11,7 +11,7 @@ using HalconDotNet;
 namespace GUI
 {
     class CameraManager
-    {       
+    {
         string _cameraType = "";
 
         public byte[,] intensity1, intensity2, intensity3;
@@ -28,10 +28,11 @@ namespace GUI
         }
         static void MyStateHandler(IState state)
         {
-            Console.Out.WriteLine("Camera 1. State: {0}", state.ToString());
+            // Could put in a useful statechange handler if desired.
+            //Console.Out.WriteLine("Camera 1. State: {0}", state.ToString());
         }
 
-        public CameraManager (string ipAddress, string cameraType)
+        public CameraManager(string ipAddress, string cameraType)
         {
             _cameraType = cameraType;
             try
@@ -40,12 +41,12 @@ namespace GUI
                 Sick.Icon.IconApi.Utility.SetErrorEventHandler(MyErrorHandler);
 
                 camSystem.Init(CameraSystemType.ETHERNET_CAMERA, "MyCamera1");
-                
+
                 /* Add event handlers here */
-                camSystem.StateChanged += MyStateHandler;               
+                camSystem.StateChanged += MyStateHandler;
 
                 /* Make sure to connect to the correct camera */
-                camSystem.SetParameter("", "camera IP address", ipAddress);                
+                camSystem.SetParameter("", "camera IP address", ipAddress);
 
                 /* Set some parameters to make sure we don't
                  * timeout and use the appropriate mode
@@ -65,28 +66,40 @@ namespace GUI
                 switch (cameraType)
                 {
                     case "bottom":
-                        camSystem.ImportCameraParameterFile("C:\\402-13\\Shared\\prm files\\Parameter FIle Bottom Inspection (just 1 3D inspection faster) v5.prm");        
+                        camSystem.ImportCameraParameterFile("C:\\402-13\\Shared\\prm files\\Parameter FIle Bottom Inspection (just 1 3D inspection faster) v5.prm");
                         break;
                     case "side":
-                        camSystem.ImportCameraParameterFile("C:\\Users\\Omicron\\Documents\\402-13-12-16-2014-onsite\\RangerSetupFiles\\Parameter File Side Inspection (three fast multiscan 3D inspection) v14.prm");        
+                        camSystem.ImportCameraParameterFile("../../../Parameter File Side Inspection (three fast multiscan 3D inspection) v15.prm");
                         break;
                     default:
                         break;
-                }                                               
+                }
+
+                /* Start acquiring
+                * The camera is now running and capturing data
+                * later pick out the buffers to read using grab */
+                camSystem.Start(); 
             }
             catch (IconException e)
             {
                 Console.WriteLine("Print somewhere");
             }
-
         }
 
         public void closeIcon()
         {
+            // stop in the name of love
+            camSystem.Stop();
             camSystem.Disconnect();
             Sick.Icon.IconApi.Utility.CloseLogFile();
             Sick.Icon.IconApi.CloseApi();
         }
+
+        /// <summary>
+        /// Delegate defined to enabled asyncronous grabbing.  Return type is for returning errorcode 
+        /// </summary>
+        /// <returns></returns>
+        public delegate Sick.Icon.Result ConnectDelegateType();
 
         /// <summary>
         /// Although I should have some sort of error tracking, I have eliminated the prompt
@@ -98,19 +111,14 @@ namespace GUI
         {
             try
             {
-                /* Start acquiring
-             * The camera is now running and capturing data
-             * later pick out the buffers to read using grab */
-            camSystem.Start();
-
-           /* Do grab with a high timeout to make sure we are
-            * not stopping before all profiles have been captured 
-            * 
-            * Maybe do some threading to improve performance */
-            ///// FIND OUT HOW TO MAKE THIS ASYNCHRONOUS
-            //camSystem.Start();
-            camSystem.Grab(out buffer1, out status, 100000);
-            //camSystem.Grab(out buffer2, out status, 100000);                            
+                /* Do grab with a high timeout to make sure we are
+                 * not stopping before all profiles have been captured 
+                 * 
+                 * Maybe do some threading to improve performance */
+                ///// FIND OUT HOW TO MAKE THIS ASYNCHRONOUS
+                //camSystem.Start();
+                camSystem.Grab(out buffer1, out status, 100000);
+                //camSystem.Grab(out buffer2, out status, 100000);                            
             }
             catch (Exception ex)
             {
@@ -131,11 +139,10 @@ namespace GUI
                 if (status.GetScansLost() != 0)
                     Console.Out.WriteLine("Lost {0} scans in the buffer.", status.GetScansLost());
             }
-            
+
             /* We need to do some processing to get the data into
              * an Halcon image.*/
-            
-            
+
             switch (_cameraType)
             {
                 case "bottom":
@@ -152,16 +159,12 @@ namespace GUI
                     break;
                 default:
                     break;
-            }  
+            }
 
             /* Make sure to release the buffer back to iCon. 
             * This could be done as soon as you are done using buffer. */
             camSystem.Release();
-
-            // stop in the name of love
-            camSystem.Stop();
         }
-
 
         public HImage getHImage(byte[,] byteArray)
         {
@@ -235,12 +238,9 @@ namespace GUI
             handle1D.Free();
 
             return _hImage;
-
-
-
         }
 
-        private HImage generateImage(int w, int h, int size,string dataType)
+        private HImage generateImage(int w, int h, int size, string dataType)
         {
             /* From iCon we get a 2D array, but Halcon requires a 1D array.
              * Here we do our first copy operation to a 1D buffer of the
@@ -267,8 +267,6 @@ namespace GUI
             return _hImage;
 
         }
-
-      
 
     }
 }
